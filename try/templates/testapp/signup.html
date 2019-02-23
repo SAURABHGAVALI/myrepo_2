@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+{%block body_block%}
+<section id="navigation" class="dark-nav">
+<!-- Navigation -->
+  <!-- Navigation Inner -->
+  <div class="nav-inner">
+    <!-- Site Logo -->
+
+    <a class="mini-nav-button gray2"><i class="fa fa-bars"></i></a>
+    <!-- Navigation Menu -->
+      <div class="nav-menu">
+      <ul class="nav uppercase">
+        <li><a href="/" class="scroll">Home</a></li>
+        <li><a href="/food.html" class="scroll">About us</a></li>
+        <li><a href="/elements.html" class="scroll">Trainers</a></li>
+        <li><a href="#testimonial" class="scroll">BMI</a></li>
+        <li><a href="blog.html" class="scroll">Login</a></li>
+        <li><a href="/signup" class="scroll">Registration</a></li>
+         </ul>
+
+         <style>
+ marquee {
+   width: 100%;
+   padding: 10px 0;
+   background-color:brown;
+ }
+</style>
+
+   <h1>...REGISTER TO ENJOY FACILITIES...</h1><hr>
+      <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Register</button>
+      <h4 > <marquee>Please Save Your Password For Future Login Or Take Screen Shot Before Register.</marquee></h4>
+      </form>
+</div>
+</div><!-- End Navigation Menu -->
+</div><!-- End Navigation Inner -->
+</section><!-- End Navigation Section -->
+{%endblock%}
